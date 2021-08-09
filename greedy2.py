@@ -13,6 +13,7 @@ def solution(name):
             answer += ord(name[i]) - 65
         else:
             answer += 91 - ord(name[i])
+
     name = list(name)
 
     if name[0] != "A":
@@ -39,6 +40,7 @@ def solution(name):
                 break
 
     return answer
-
+"""
 name = "JEROEN"
 print(solution(name))
+"""
