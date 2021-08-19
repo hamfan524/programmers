@@ -18,7 +18,7 @@ def solution(jobs):
         else:
             time += 1
 
-    return answer // len(jobs)
+    return answer // count
 
 """
 jobs = [[0, 3], [1, 9], [2, 6]]
