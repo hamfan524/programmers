@@ -22,5 +22,7 @@ def solution(answers):
 
     return answer
 
+"""
 answers = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 print(solution(answers))
+"""
