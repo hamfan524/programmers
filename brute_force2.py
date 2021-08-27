@@ -26,6 +26,7 @@ def solution(numbers):
 
     return len(answer)
 
-
+"""
 numbers = "002"
 print(solution(numbers))
+"""
