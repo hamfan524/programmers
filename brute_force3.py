@@ -6,7 +6,9 @@ def solution(brown, yellow):
             if yellow == (i - 2) * (a - 2):
                 return [i, a]
 
+"""
 brown = 10
 yellow = 2
 
 print(solution(brown, yellow))
+"""
