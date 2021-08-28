@@ -1,4 +1,4 @@
-def solution(numbers, target):  #bfs
+def solution(numbers, target):
     from collections import deque
     answer = 0
     q = deque()
@@ -15,22 +15,9 @@ def solution(numbers, target):  #bfs
                 answer += 1
     return answer
 
-def solution2(numbers, target):  #dfs
-    answer2 = 0
-    def dfs(idx, result):
-        if idx == len(numbers):
-            if result == target:
-                nonlocal answer2
-                answer2 += 1
-            return
-        else:
-            dfs(idx+1, result + numbers[idx])
-            dfs(idx-1, result - numbers[idx])
-    dfs(0, 0)
-    return answer2 
-
+"""
 numbers = [1, 1, 1, 1, 1]
 target = 3
 
 print(solution(numbers, target))
-print(solution2(numbers, target))
+"""
