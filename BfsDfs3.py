@@ -17,6 +17,7 @@ def dfs(graph, n, path, now):
         graph[now].insert(0, next)
     
     path.pop()
+    
     return False
 
 def solution(tickets):
