@@ -3,15 +3,14 @@ def dfs(graph, n, path, now):
 
     if len(path) == n + 1:
         return True
-    
+
     if now not in graph:
         path.pop()
         return False
     
     for _ in range(len(graph[now])):
-        next = graph[now][-1]
-        graph[now].pop()
-
+        next = graph[now].pop()    
+        
         if dfs(graph, n, path, next):
             return True
         
@@ -22,15 +21,15 @@ def dfs(graph, n, path, now):
 
 def solution(tickets):
     answer = []
-    routes = {}
+    graph = {}
     for start, end in tickets:
-        routes[start] = routes.get(start, []) + [end]
-
-    for i in routes.keys():
-        routes[i].sort(reverse = True)
-
+        graph[start] = graph.get(start, []) + [end]
+    
+    for i in graph.keys():
+        graph[i].sort(reverse=True)
+    
     path = []
-    if dfs(routes, len(tickets), path, "ICN"):
+    if dfs(graph, len(tickets), path, "ICN"):
         answer = path
 
     return answer
